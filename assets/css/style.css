@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black--: black;
+  --main--: #08030a;
+  --white--: #fff;
+  --red--: red;
+  --gray--: gray;
+  --lightgray--: rgb(241, 241, 241);
+  --yellow--: rgb(255, 213, 27);
+}
+
+.text_gray {
+  color: var(--gray--);
+}
+
+.bg_gray {
+  background-color: var(--gray--);
+}
+
+.placeholder_white::placeholder {
+  color: #fff;
+
+}
+
+.fs-7 {
+  font-size: 13px;
+  color: var(--gray--);
+}
+
+.fs-8 {
+  font-size: 12px;
+}
+
+.fs-9 {
+  font-size: 10px;
+}
+
+.fw-200 {
+  font-weight: 200 !important;
+}
+
+.fw-300 {
+  font-weight: 400 !important;
+}
+
+.fw-400 {
+  font-weight: 200 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 700 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.position-r {
+  position: relative;
+}
+
+.button__radius {
+  border-radius: 20px;
+}
+
+.btn-gray {
+  background-color: var(--gray--);
+  color: #fff;
+}
+
+.download__btn {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.a-color {
+  color: var(--gray--);
+}
+
+.nofocus:focus {
+  outline: none;
+  box-shadow: none;
+
+}
+
+.icon {
+  color: var(--gray--);
+}
+
+.capitalize {
+
+  text-transform: capitalize !important;
+}
+
+body {
+  background-color: var(--main--);
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown-item:hover {
+  background-color: var(--main--);
+  font-size: 17px;
+}
+
+.fa-star {
+  color: var(--yellow--);
+}
+
+.card-main {
+  padding: 10px;
+  width: 200px;
+}
+
+.ratings {
+  background-color: var(--lightgray--);
+  padding: 3px 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.movie-name {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+}
+
+.cards {
+  width: 100%;
+  position: relative;
+}
+
+.card-img {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.banner-img {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.small-img {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.card-banner {
+  border-radius: 25px !important;
+  overflow: hidden !important;
+}
+
+.cards:hover .card-img {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+.footer-bg {
+  padding: 10px 0px;
+  background-image: linear-gradient(rgba(129, 52, 52, 0.162),
+      rgba(0, 0, 0, 1.062)),
+    url(../images/footerbg-01.jpg);
+  background-position: start;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.black-div {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+  height: 60vh;
+  background-color: black;
+}
+
+.blur-div {
+  background-color: var(--main--);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: -10px;
+  filter: blur(10px);
+}
+
+.adsbonus {
+  width: 100%;
+  height: 120px;
+}
+
+.w__75 {
+  width: 75%;
+}
+
+.comment__avatar>img {
+  width: 80px;
+  height: 80px;
+}
+
+.comment__content {
+  width: 75%;
+}
+
+@media (max-width: 1024px) {
+  .card-banner {
+    height: auto;
+    width: 100%;
+  }
+
+  .comment__avatar>img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .comment__content {
+    width: 80%;
+  }
+}
+
+
+.icon:hover {
+  color: var(--white--);
+}
+
+@media (max-width: 767px) {
+  .card-banner {
+    height: auto;
+    width: 100%;
+  }
+
+  .comment__avatar>img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .comment__content {
+    width: 85%;
+  }
+
+  .fs-custom {
+    font-size: 15px;
+  }
+
+  .footer-bg {
+    background: #08030a;
+    height: auto;
+  }
+
+  .black-div {
+    height: auto;
+  }
+
+  .blur-div {
+    height: auto;
+  }
+
+  .w__75 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 351px) {
+  .comment__avatar>img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .comment__content {
+    width: 75%;
+  }
+
+  .fs-custom {
+    font-size: 11px;
+  }
+
+  .card-img {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+  .movie-name {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.line-div::after {
+  content: "";
+  position: absolute;
+  background-color: var(--red--);
+  height: 3px;
+  width: 40%;
+  right: 0;
+}

@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container  align-items-center">
+                    <div><a class="navbar-brand text-light fs-5" href="#"> Movie web </a></div>
+
+                    <!-- <div class="d-flex justify-content-end">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+                           <li>
+                               <i class="fa-solid fa-magnifying-glass fs-5 icon"></i>
+                           </li>
+                           <li>
+                               <i class="fa-regular fa-bell fs-5 icon"></i>
+                           </li>
+                           <li>
+                               <img src="assets/images/logo2.png" class="w-75" alt="">
+                           </li>
+                       </ul>
+                       </div> -->
+                    <div class="d-flex gap-1 align-items-center">
+                        <div class="d-lg-none d-flex align-items-center ">
+                            <ul class="list-unstyled mb-0   d-flex align-items-center gap-2">
+                                <li>
+                                    <i class="fa-solid fa-magnifying-glass fs-6 icon"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-bell fs-6 icon"></i>
+                                </li>
+                                <button class="navbar-toggler mt-2  p-0" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon text-light"><i class="fa-solid fa-bars"></i></span>
+                                </button>
+                                <li>
+                                    <img src="assets/images/logo2.png" class="w-75" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                            <li class="nav-item mx-auto">
+                                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown mx-auto">
+                                <a class="nav-link dropdown-toggle text-light a-color" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="a-color">Series</span>
+                                </a>
+                                <ul class="dropdown-menu bg-dark p-1" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-light" href="#">Money Heist</a></li>
+                                    <li><a class="dropdown-item text-light" href="#">Mirzapur</a></li>
+                                    <li><a class="dropdown-item text-light" href="#">Racers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown mx-auto">
+                                <a class="nav-link dropdown-toggle text-light a-color" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="a-color">Movies</span>
+                                </a>
+                                <ul class="dropdown-menu bg-dark p-1" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                                    <li><a class="dropdown-item text-light" href="#">Adventure</a></li>
+                                    <li><a class="dropdown-item text-light" href="#">Comedy</a></li>
+                                    <li><a class="dropdown-item text-light" href="#">drama</a></li>
+                                    <li><a class="dropdown-item text-light" href="#">story</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-auto ">
+                                <a class="nav-link " aria-current="page" href="#"><span class="a-color">
+                                        Watchlist</span></a>
+                            </li>
+                            <li class="nav-item mx-auto">
+                                <a class="nav-link text-light a-color" aria-current="page" href="#"><span
+                                        class="a-color">Lorem Ipsum</span> </a>
+                            </li>
+                        </ul>
+                        <div class="d-lg-flex d-none justify-content-end">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+                                <li>
+                                    <i class="fa-solid fa-magnifying-glass fs-5 icon"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-bell fs-5 icon"></i>
+                                </li>
+                                <li>
+                                    <img src="assets/images/logo2.png" class="w-75" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pt-5">
+        <div class="container">
+            <div class=" d-flex justify-content-center align-items-center">
+                <div class="line-div position-r">
+                    <h1 class="text-white text-uppercase">Web Series</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="banner">
+        <div class="container">
+            <div class="slider-banner">
+                <div class="card-banner ">
+                    <div class="cards">
+                        <div>
+                            <a href="moviedetail.html"><img src="assets/images/banner-1.png" class="banner-img" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-banner ">
+                    <div class="cards">
+                        <div>
+                           <a href="moviedetail.html"><img src="assets/images/banner-2.png" class="banner-img" alt=""></a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="card-banner ">
+                    <div class="cards">
+                        <div>
+                            <a href="moviedetail.html"><img src="assets/images/banner-3.png" class="banner-img" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="small pt-lg-5 pt-3">
+        <div class="container">
+            <div class="slider-small">
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-1.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-2.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-1.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-2.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section>
+        <div class="container pt-5">
+            <div class="row mx-0">
+                <div class="slider-single ">
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"> <img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <div class="row mx-0">
+                <div class="slider-single ">
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"> <img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <div class="row mx-0">
+                <div class="slider-single ">
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"> <img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <div class="row mx-0">
+                <div class="slider-single ">
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"> <img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <div class="row mx-0">
+                <div class="slider-single ">
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"> <img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <div class="row mx-0">
+                <div class="slider-single ">
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"> <img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape1.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape2.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape3.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main ">
+                        <div class="cards ">
+                            <div class="d-flex">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i> 5.1
+                                </div>
+                            </div>
+                            <div>
+                                <a href="moviedetail.html"><img src="assets/images/Card/Landscape4.png"
+                                        class="card-img  " alt=""></a>
+                            </div>
+                            <div class="text-center">
+                                <div class="movie-name text-white  ">
+                                    Movie Name (2022)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="small pt-lg-5 pt-3">
+        <div class="container">
+            <div class="slider-small">
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-1.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-2.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-1.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="assets/images/small-2.png" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    
+
+    <section class="footer">
+
+        <div class="container-fluid footer-bg">
+            <div class="blur-div">
+
+            </div>
+            <div class="black-div">
+
+            </div>
+            <footer class="text-center text-lg-start text-muted">
+
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <div class="row mt-3">
+                            <div class="col-md-12 col-lg-5 col-xl-5 mx-auto mb-4 fs-8">
+                                <div>
+                                    <a href="#" class="text-decoration-none text-light">
+                                        <h5>Movies Web</h5>
+                                    </a>
+                                </div>
+                                <p class="text-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                                    consequuntur quae asperiores? Unde voluptatem atque quos dolore voluptas nesciunt,
+                                    facilis quo ea? Architecto voluptatum odit atque quas ex deleniti accusamus?</p>
+                            </div>
+
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light fs-8">
+
+                                <h6 class="text-uppercase mb-4">
+                                    Categories
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">Movies</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">Videos</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">Popular</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">New</a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-light fs-8">
+                                <h6 class="text-uppercase mb-4 ">
+                                    Trending
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">HollyWood</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">BollyWood</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">TollyWood</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset text-decoration-none">LollyWood</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-light fs-8">
+                                <h6 class="text-uppercase mb-4">Contact</h6>
+                                <p> New York, NY 10012, US</p>
+                                <p> info@example.com</p>
+                                <p>+ 01 234 567 88</p>
+                                <p>+ 01 234 567 89</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>
+    </section>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="assets/js/index.js"></script>
+
+</html>
