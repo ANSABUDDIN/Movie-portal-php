@@ -107,7 +107,9 @@
 .icon {
   color: var(--gray--);
 }
-
+a{
+  text-decoration: none !important;
+}
 .capitalize {
 
   text-transform: capitalize !important;

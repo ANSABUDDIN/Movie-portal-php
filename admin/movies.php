@@ -32,13 +32,11 @@ include("../config.php");
           <div class="page-header">
             <div class="row align-items-end">
               <div class="col-sm mb-2 mb-sm-0">
-
-
                 <h1 class="page-header-title">Movies</h1>
               </div>
               <div class="col-sm-auto">
-                <a class="btn btn-primary" href="add-book.php">
-                  <i class="bi-book me-1"></i> Add Ebook
+                <a class="btn btn-primary" href="add-movie.php">
+                  <i class="bi-book me-1"></i> Add Movie
                 </a>
               </div>
             </div>
@@ -508,7 +506,7 @@ include("../config.php");
 
               <!-- Form -->
               <div class="row mb-4">
-                <label for="editPhoneLabel" class="col-sm-3 col-form-label form-label">Phone Number
+                <label for="editPhoneLabel" class="col-sm-3 col-form-label form-label">Category
 
                 </label>
 
@@ -516,9 +514,7 @@ include("../config.php");
                   <div class="input-group input-group-sm-vertical">
                     <input type="text" class="js-masked-input form-control" disabled name="phone" id="editPhoneLabel"
                       placeholder="+x(xxx)xxx-xx-xx" aria-label="+x(xxx)xxx-xx-xx"
-                      value="<?php echo $GETuser['phone']; ?>" data-hs-mask-options='{
-                                 "template": "+0(000)000-00-00"
-                               }'>
+                      value="<?php echo $Getmovie['category']; ?>" />
                   </div>
                 </div>
               </div>
@@ -526,19 +522,27 @@ include("../config.php");
 
               <!-- Form -->
               <div class="row mb-4">
-                <label for="editOrganizationModalLabel" class="col-sm-3 col-form-label form-label">Role</label>
+                <label for="editOrganizationModalLabel" class="col-sm-3 col-form-label form-label">Director name</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" name="editOrganizationModal" disabled
                     id="editOrganizationModalLabel" placeholder="Your organization" aria-label="Your organization"
-                    value="<?php echo $GETuser['category']; ?>">
+                    value="<?php echo $Getmovie['director_name']; ?>">
                 </div>
               </div>
               <div class="row mb-4">
-                <label for="editOrganizationModalLabel" class="col-sm-3 col-form-label form-label">Country</label>
+                <label for="editOrganizationModalLabel" class="col-sm-3 col-form-label form-label">Movie Star</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" name="editOrganizationModal" disabled
                     id="editOrganizationModalLabel" placeholder="Your organization" aria-label="Your organization"
-                    value="<?php echo $GETuser['country']; ?>">
+                    value="<?php echo $Getmovie['movie_star']; ?>">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <label for="editOrganizationModalLabel" class="col-sm-3 col-form-label form-label">Release year</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="editOrganizationModal" disabled
+                    id="editOrganizationModalLabel" placeholder="Your organization" aria-label="Your organization"
+                    value="<?php echo $Getmovie['release_year']; ?>">
                 </div>
               </div>
             </form>
@@ -548,90 +552,34 @@ include("../config.php");
             <form>
               <div class="row mb-4">
                 <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Name of your project
+                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Movie Link
                     ?</label>
                 </div>
                 <div class="col-12">
                   <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['name_your_project']; ?>">
+                    aria-label="Your address" value="<?php echo $Getmovie['movie_link']; ?>">
                 </div>
               </div>
               <div class="row mb-4">
                 <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Number of nft’s
-                    ?</label>
+                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Movie Download Link
+                    </label>
                 </div>
                 <div class="col-12">
                   <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['number_of_nft']; ?>">
+                    aria-label="Your address" value="<?php echo $Getmovie['download_link']; ?>">
                 </div>
               </div>
               <div class="row mb-4">
                 <div class="col-12">
-                  <label for="editAddressLine1Label" class=" col-form-label form-label">Short description of your
-                    project ?</label>
+                  <label for="editAddressLine1Label" class=" col-form-label form-label">Movie Trailer Link</label>
                 </div>
                 <div class="col-12">
                   <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['description']; ?>">
+                    aria-label="Your address" value="<?php echo $Getmovie['trailer_link']; ?>">
                 </div>
               </div>
-              <div class="row mb-4">
-                <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Discord link ?</label>
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['discord']; ?> ">
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Website URL ?</label>
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['website']; ?>">
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Average sale price
-                    ?</label>
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['average_sale_price']; ?>">
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Sales date ?</label>
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['date']; ?>">
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-12">
-                  <label for="editAddressLine1Label" class="col-sm-3 col-form-label form-label">Your budget ?</label>
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['budget']; ?>">
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-12">
-                  <label for="editAddressLine1Label" class=" col-form-label form-label">How would you like us to help
-                    you?</label>
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" name="addressLine1" disabled id="editAddressLine1Label"
-                    aria-label="Your address" value="<?php echo $GETuser['help']; ?>">
-                </div>
-              </div>
+         
 
             </form>
           </div>

@@ -22,7 +22,7 @@
         <div class="">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                 <div class="container  align-items-center">
-                    <div><a class="navbar-brand text-light fs-5" href="#"> Movie web </a></div>
+                    <div><a class="navbar-brand text-light fs-5" href="index.php"> Movie web </a></div>
 
                     <!-- <div class="d-flex justify-content-end">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
@@ -62,7 +62,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
                             <li class="nav-item mx-auto">
-                                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item dropdown mx-auto">
                                 <a class="nav-link dropdown-toggle text-light a-color" href="#" id="navbarDropdown"

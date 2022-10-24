@@ -20,7 +20,7 @@ include("../config.php");
   <div class="content container-fluid">
 
     <!-- Step Form -->
-    <form action="add-book-db.php" method="post"  class="js-step-form py-md-5" enctype="multipart/form-data" data-hs-step-form-options='{
+    <form action="add-movie-db.php" method="post"  class="js-step-form py-md-5" enctype="multipart/form-data" data-hs-step-form-options='{
               "progressSelector": "#addUserStepFormProgress",
               "stepsSelector": "#addUserStepFormContent",
               "endSelector": "#addUserFinishBtn",
@@ -35,7 +35,7 @@ include("../config.php");
               <div class="col-sm mb-2 mb-sm-0">
 
 
-                <h1 class="page-header-title">Add Ebooks</h1>
+                <h1 class="page-header-title">Add Movie</h1>
               </div>
 
             </div>
@@ -48,26 +48,76 @@ include("../config.php");
 
               <div class="card-body">
                 <div class="row mb-4">
-                  <label for="firstNameLabel" class="col-sm-3 col-form-label form-label">Ebook Name</label>
+                  <label for="firstNameLabel" class="col-sm-3 col-form-label form-label">Movie Title</label>
                   <div class="col-sm-9">
                     <div class="input-group input-group-sm-vertical">
-                      <input type="text" class="form-control" name="ebook" id="firstNameLabel"
-                        placeholder="Ebook Name">
+                      <input type="text" class="form-control" name="title" id="firstNameLabel"
+                        placeholder="Movie Title">
                     </div>
-                  </div>
-                </div>
-                <div class="row mb-4">
-                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Amount</label>
-
-                  <div class="col-sm-9">
-                    <input type="number" class="form-control" name="amount" id="emailLabel" placeholder="Amount">
                   </div>
                 </div>
                 <div class="row mb-4">
                   <label for="emailLabel" class="col-sm-3 col-form-label form-label">Description</label>
 
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" name="description" id="emailLabel" placeholder="Description">
+                    <!-- <textarea name="description"  class="form-control"  placeholder="Description" id="emailLabel" cols="30" rows="8"></textarea> -->
+                    <input type="text" class="form-control"  name="description" placeholder="Description" id="emailLabel" >
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Movie Star</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="movie_star" id="emailLabel" placeholder="Movie star">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Director name</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="director_name" id="emailLabel" placeholder="Director name star">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Category</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="category" id="emailLabel" placeholder="Category">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Movie Link</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="movie_link" id="emailLabel" placeholder="Movie link">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Download Link</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="download_link" id="emailLabel" placeholder="Download link">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Trailer Link</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="trailer_link" id="emailLabel" placeholder="Trailer link">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Release Year</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="release_year" id="emailLabel" placeholder="Release Year ">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="emailLabel" class="col-sm-3 col-form-label form-label">Country </label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" name="country" id="emailLabel" placeholder="Country">
                   </div>
                 </div>
                 <div class="row mb-4">
