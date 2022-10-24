@@ -151,8 +151,8 @@ include("../config.php");
                         </a>
                       </td>
                       <td>
-                        darama
-                        <!-- <span class="d-block fs-5 text-body"><?php echo $movieDEtail['description']; ?></span> -->
+                   
+                        <span class="d-block fs-5 text-body"><?php echo $movieDEtail['category']; ?></span>
                       </td>
 
                       </td>

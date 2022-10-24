@@ -284,6 +284,13 @@
                 <span class="nav-link-title">Banners</span>
               </a>
             </div>
+            <div class="nav-item">
+              <a class="nav-link " href="banner.php" data-placement="left">
+                <i class="bi-tv nav-icon"></i>
+
+                <span class="nav-link-title">Ads</span>
+              </a>
+            </div>
            
             <!-- End Content -->
 
