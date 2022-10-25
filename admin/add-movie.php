@@ -82,7 +82,12 @@ include("../config.php");
                   <label for="emailLabel" class="col-sm-3 col-form-label form-label">Category</label>
 
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" name="category" id="emailLabel" placeholder="Category">
+                    <select class="form-control" name="category">
+                      <option value="Movie">Movie</option>
+                      <option value="Drama">Drama</option>
+                      <option value="Series">Series</option>
+                    </select>
+                    <!-- <input type="text" class="form-control" name="category" id="emailLabel" placeholder="Category"> -->
                   </div>
                 </div>
                 <div class="row mb-4">

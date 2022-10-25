@@ -24,8 +24,8 @@ if((isset($_POST['submit'])))
     $lfilecheckstore = array('jpg','png','jpeg');
     if (in_array($lfilecheck,$lfilecheckstore))
     { 
-        $ldestinationfile ='../assets/images/movieposter/'.$lfilename;
-        $lsdestinationfile ='assets/images/movieposter/'.$lfilename;
+        $ldestinationfile ='../assets/images/webimages/'.$lfilename;
+        $lsdestinationfile ='assets/images/webimages/'.$lfilename;
         move_uploaded_file($lfiletmp,$ldestinationfile);
     }else
     {

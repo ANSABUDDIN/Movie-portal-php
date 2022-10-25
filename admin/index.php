@@ -4,7 +4,9 @@ if(!isset($_SESSION['admin']))
 {
   header("location:login.php");
 }
-include './header.php'; ?>
+include './header.php';
+include '../config.php';
+?>
 
   <main id="content" role="main" class="main">
     <!-- Content -->
@@ -34,12 +36,18 @@ include './header.php'; ?>
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">Total users</h6>
+            <h6 class="card-subtitle mb-2">Total Movies</h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
-                <span class="js-counter display-4 text-dark">24</span>
-                <span class="text-body fs-5 ms-1">from 22</span>
+                <span class="js-counter display-4 text-dark">
+                <?php 
+                  $movies = mysqli_query($con,"select * from movie where category='Movie'");
+                  echo mysqli_num_rows($movies);
+                  ?>  
+                
+                </span>
+                <!-- <span class="text-body fs-5 ms-1">from 22</span> -->
               </div>
               <!-- End Col -->
 
@@ -60,12 +68,18 @@ include './header.php'; ?>
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">Active members</h6>
+            <h6 class="card-subtitle mb-2">Total Drama</h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
-                <span class="js-counter display-4 text-dark">12</span>
-                <span class="text-body fs-5 ms-1">from 11</span>
+                <span class="js-counter display-4 text-dark">
+
+                <?php 
+                  $movies = mysqli_query($con,"select * from movie where category='Drama'");
+                  echo mysqli_num_rows($movies);
+                  ?>  
+                </span>
+               
               </div>
 
               <div class="col-auto">
@@ -84,13 +98,17 @@ include './header.php'; ?>
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">New/returning</h6>
+            <h6 class="card-subtitle mb-2">Total Series </h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
-                <span class="js-counter display-4 text-dark">56</span>
-                <span class="display-4 text-dark">%</span>
-                <span class="text-body fs-5 ms-1">from 48.7</span>
+                <span class="js-counter display-4 text-dark">
+                <?php 
+                  $movies = mysqli_query($con,"select * from movie where category='Series'");
+                  echo mysqli_num_rows($movies);
+                  ?> 
+                </span>
+                
               </div>
 
               <div class="col-auto">
@@ -109,17 +127,16 @@ include './header.php'; ?>
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">Active members</h6>
+            <h6 class="card-subtitle mb-2">Total Ads Run</h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
                 <span class="js-counter display-4 text-dark">28.6</span>
-                <span class="display-4 text-dark">%</span>
-                <span class="text-body fs-5 ms-1">from 28.6%</span>
+                
               </div>
 
               <div class="col-auto">
-                <span class="badge bg-soft-secondary text-secondary p-1">0.0%</span>
+                <!-- <span class="badge bg-soft-secondary text-secondary p-1">0.0%</span> -->
               </div>
             </div>
             <!-- End Row -->

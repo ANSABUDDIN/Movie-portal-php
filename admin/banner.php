@@ -11,7 +11,7 @@ include("../config.php");
     if(isset($_GET['delete']))
     {
         $id = $_GET['delete'];
-        $result = mysqli_query($con,"DELETE FROM `movie` WHERE id='$id'");
+        $result = mysqli_query($con,"DELETE FROM `banner` WHERE id='$id'");
         $_SESSION['error'] = " Delete Successfully";   
     }?>
 
@@ -37,7 +37,7 @@ include("../config.php");
                 <h1 class="page-header-title">Banner</h1>
               </div>
               <div class="col-sm-auto">
-                <a class="btn btn-primary" href="add-book.php">
+                <a class="btn btn-primary" href="add-banner.php">
                   <i class="bi-book me-1"></i> Add Banner
                 </a>
               </div>
@@ -154,7 +154,7 @@ include("../config.php");
                         <!-- <button type="button" class="btn btn-success btn-sm">
                           Edit
                         </button> -->
-                        <a href="?delete=<?php echo $movieDEtail['id']; ?>"  class="btn btn-danger btn-sm">
+                        <a href="?delete=<?php echo $bannerDEtail['id']; ?>"  class="btn btn-danger btn-sm">
                           Delete
                         </a>
                         <!-- <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"

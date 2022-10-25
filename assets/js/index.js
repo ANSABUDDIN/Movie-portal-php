@@ -107,3 +107,35 @@ $('.slider-small').slick({
     },
   }]
 });
+$('.vertical-small').slick({
+  slidesToShow: 3,
+  // slidesToScroll: 4,
+  arrows: false,
+  dots: false,
+  fade: false,
+  adaptiveHeight: true,
+  infinite: true,
+  useTransform: true,
+  vertical:true,
+  speed: 1000,
+  autoplay: true,
+  swipeToSlide: true,
+  cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+  responsive: [{
+    breakpoint: 1024,
+    settings: {
+      arrows: false,
+      slidesToShow: 2,
+      
+      autoplay: true,
+    },
+
+    breakpoint: 991,
+    settings: {
+      arrows: false,
+      slidesToShow: 1,
+      
+      autoplay: true,
+    },
+  }]
+});
