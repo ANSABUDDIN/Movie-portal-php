@@ -59,9 +59,9 @@ include 'config.php';
                                 </a>
                                 <ul class="dropdown-menu bg-dark p-1" aria-labelledby="navbarDropdown">
                                     <?php
-                                    $series = mysqli_query($con, "select * from movie where category = 'Series' ");
+                                    $series = mysqli_query($con, "select * from series ");
                                     foreach ($series as $getseries) { ?>
-                                        <li><a class="dropdown-item text-light" href="moviedetail.php?detail=<?php echo $getseries['id']; ?>">
+                                        <li><a class="dropdown-item text-light"  href="seriesdetail.php?series=<?php echo $getseries['id']; ?>&season=1">
                                             
                                         <?php
                                         echo $getseries['title'];

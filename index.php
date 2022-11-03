@@ -131,8 +131,7 @@ include 'config.php';
         <div class="slider-single">
             <?php 
             
-                    $movie = mysqli_query($con, "select * from movie where category = 'Series' ");
-            
+                    $movie = mysqli_query($con, "select * from series ");
                
                      foreach ($movie as $GETmovie) { ?>
             <div class="card-main ">
@@ -143,7 +142,7 @@ include 'config.php';
                             </div> -->
                     </div>
                     <div>
-                        <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  "
+                        <a href="seriesdetail.php?series=<?php echo $GETmovie['id']; ?>&season=1"><img class="card-img  "
                                 src="<?php echo $GETmovie['image']; ?>" alt=""></a>
                     </div>
                     <div class="text-center">
