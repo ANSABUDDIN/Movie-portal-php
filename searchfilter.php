@@ -28,7 +28,47 @@ include 'config.php';
                         </div>
                         <div class="pt-3 flex-column d-flex ">
                             <h5 class="text-light fs-6">
-                                Category
+                                Genre
+                            </h5>
+                            <select name="genre" id="" class=" form-control bg-transparent text-danger">
+                                <option disabled selected>
+                                    Select any option
+                                </option>
+                                <?php
+                                $sql ="SELECT  DISTINCT genre FROM `movie`";
+                                $category = mysqli_query($con,$sql);
+                                foreach ($category as $GETcategory){?>
+                                    <option value="<?php echo $GETcategory['genre']; ?>">
+                                        <?php echo $GETcategory['genre']; ?>
+                                    </option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="pt-3 flex-column d-flex ">
+                            <h5 class="text-light fs-6">
+                                Year
+                            </h5>
+                            <select name="year" id="" class=" form-control bg-transparent text-danger">
+                                <option disabled selected>
+                                    Select any option
+                                </option>
+                                <?php
+                                $sql ="SELECT  DISTINCT release_year FROM `movie`";
+                                $category = mysqli_query($con,$sql);
+                                foreach ($category as $GETcategory){?>
+                                    <option value="<?php echo $GETcategory['release_year']; ?>">
+                                        <?php echo $GETcategory['release_year']; ?>
+                                    </option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="pt-3 flex-column d-flex ">
+                            <h5 class="text-light fs-6">
+                                Country
                             </h5>
                             <select name="category" id="" class=" form-control bg-transparent text-danger">
                                 <option disabled selected>
