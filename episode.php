@@ -101,7 +101,7 @@ foreach ($series as $series_detail) {
                                 </div> -->
                                 </div>
                                 <div>
-                                    <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt=""></a>
+                                    <a href="episode.php?series=<?php echo $series_id ?>&&episode=<?php echo $GETmovie['id']; ?>&&season=<?php echo $season_name ?>"><img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt=""></a>
                                 </div>
 
                             </div>
@@ -172,10 +172,13 @@ foreach ($series as $series_detail) {
             <p class="fs-5 text-white">
                 Comments
             </p>
-            <form action="add-comments-db.php" method="post">
+            <form action="add-episode-comment-db.php" method="post">
                 <div class="bg_gray w-100 button__radius py-3 d-flex justify-content-between px-4">
                     <input type="text" name="comments" class="bg-transparent  border-0 nofocus w-100 text-white placeholder_white" placeholder="leave a comment ...">
-                    <input type="hidden" name="movie-id" value="<?php echo $_GET['detail']; ?>">
+                    <input type="hidden" name="season-id" value="<?php echo $season_name;?>">
+                    <input type="hidden" name="episode-id" value="<?php echo $episode_id; ?>">
+                    <input type="hidden" name="series-id" value="<?php echo $series_id; ?>">
+
                     <button class="btn-gray-1 " name="submit" type="submit">
                         Send
                     </button>
@@ -183,7 +186,7 @@ foreach ($series as $series_detail) {
                 </div>
             </form>
             <?php
-            $result = mysqli_query($con, "Select * from comments order by id DESC LIMIT 3 ");
+            $result = mysqli_query($con, "Select * from comments where `episode_id` =$episode_id order by id DESC LIMIT 3");
             foreach ($result as $Getresult) {
             ?>
                 <div class="d-flex gap-lg-3 align-items-center  gap-md-5 gap-3 mt-5 ">

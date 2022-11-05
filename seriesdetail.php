@@ -40,6 +40,45 @@ if (isset($_GET['season'])) {
     <div class="row mx-0 gap-lg-0 gap-5">
         <div class="col-lg-9 ps-0">
             <div class="row mx-0 gap-lg-0 align-items-center gap-4">
+
+                <div class="col-lg-12 px-lg-0">
+                    <div class="d-flex justify-content-center w-100 mx-auto my-4">
+                        <iframe width="100%" class="rounded-3" height="415" src="<?php echo $trailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- <h3 class="capitalize text-light">
+
+                        <?php echo $title . " | | " . $release_year; ?>
+                    </h3>
+                    <h6 class="capitalize text-light">
+                
+                    </h6> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="d-flex flex-column ">
+                <div class="vertical-small">
+                    <?php
+                    $ads = mysqli_query($con, "select * from ads where category= 'sidebanner'");
+                    foreach ($ads as $GETads) {
+                    ?>
+                        <div class="card-small">
+                            <div class="cards">
+                                <div class="pe-3">
+                                    <img src="<?php echo $GETads['image']; ?>" class="adsbonus" alt="" style="border-radius: 20px;">
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-0 gap-lg-0 gap-5">
+        <div class="col-lg-9 ps-0">
+            <div class="row mx-0 gap-lg-0 align-items-center gap-4">
                 <div class="col-lg-5 ps-0">
                     <!-- <img class="card__banner w-100 h-100" style="border-radius: 24px;"
                             src="assets/images/Landscape.png" alt=""> -->
@@ -106,25 +145,28 @@ if (isset($_GET['season'])) {
 
                 </div>
                 <h5 class="pt-5 px-0 capitalize text-light">
-            <?php echo $title . " All Seasons "; ?>
-        </h5>
-                <div class="row  gap-2 my-4">
+                    <?php echo $title . " All Seasons "; ?>
+                </h5>
+                <div class="text-center">
+                    <div class="row  gap-2 auti my-4">
 
-                    <?php
-                    $sql = "SELECT  DISTINCT season FROM `episode` where series_id='$series_id' order by season ASC ";
-                    $season = mysqli_query($con, $sql);
-                    foreach ($season as $GETseason) { ?>
-                        <div class="col-2 px-0 d-flex justify-content-center">
-                            <a href="seriesdetail.php?series=<?php echo $series_id; ?>&season=1"  class="btn btn-gray-1 w-100 px-3 ">
-                               Season <?php echo $GETseason['season'];  ?>
-                            </a>
-                        </div>
-                    <?php
-                    }
-                    ?>
+                        <?php
+                        $sql = "SELECT  DISTINCT season FROM `episode` where series_id='$series_id' order by season ASC ";
+                        $season = mysqli_query($con, $sql);
 
-          
+                        foreach ($season as $GETseason) { ?>
+                            <div class="col-lg-2 col-12 px-0 d-flex justify-content-center">
+                                <a href="seriesdetail.php?series=<?php echo $series_id; ?>&season=<?php echo $GETseason['season']; ?>" class="btn btn-gray-1 w-100 px-3 ">
+                                    Season <?php echo $GETseason['season'];  ?>
+                                </a>
+                            </div>
+                        <?php
+                        }
+                        ?>
 
+
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,46 +197,46 @@ if (isset($_GET['season'])) {
         <h5 class="capitalize text-light">
             <?php echo $title . " Season " . $season_name . " Episodes "; ?>
         </h5>
-            <div class="row mx-0">
-                <div class="slider-single">
-                    <?php
-                    $movie = mysqli_query($con, "select * from episode where `series_id`='$series_id' And season='$season_name'");
-                    if (mysqli_num_rows($movie) > 0) {
-                        foreach ($movie as $GETmovie) { ?>
-                            <div class="card-main ">
-                                <div class="cards cards-4 ">
-                                    <div class="d-flex">
-                                        <!-- <div class="ratings">
+        <div class="row mx-0">
+            <div class="slider-single">
+                <?php
+                $movie = mysqli_query($con, "select * from episode where `series_id`='$series_id' And season='$season_name'");
+                if (mysqli_num_rows($movie) > 0) {
+                    foreach ($movie as $GETmovie) { ?>
+                        <div class="card-main ">
+                            <div class="cards cards-4 ">
+                                <div class="d-flex">
+                                    <!-- <div class="ratings">
                                     <i class="fa-solid fa-star"></i> 5.1
                                 </div> -->
-                                    </div>
-                                    <div>
-                                        <a href="episode.php?episode=<?php echo $GETmovie['id'];?>&&season=1"><img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt=""></a>
-                                    </div>
-
                                 </div>
-                                <div class="text-center">
-                                    <div class=" movie-name-4 text-white my-3  ">
-                                        <p class="capitalize">
-                                            <?php echo $GETmovie['title']; ?>
-                                        </p>
-                                    </div>
+                                <div>
+                                    <a href="episode.php?series=<?php echo $series_id ?>&&episode=<?php echo $GETmovie['id']; ?>&&season=<?php echo $season_name ?>"><img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt=""></a>
+                                </div>
+
+                            </div>
+                            <div class="text-center">
+                                <div class=" movie-name-4 text-white my-3  ">
+                                    <p class="capitalize">
+                                        <?php echo $GETmovie['title']; ?>
+                                    </p>
                                 </div>
                             </div>
-                        <?php
-                        }
-                        ?>
-                    <?php
-                    } else {
-                    ?>
-                        <div class="text-danger my-3">
-                            Comming Soon
                         </div>
                     <?php
                     }
                     ?>
-                </div>
+                <?php
+                } else {
+                ?>
+                    <div class="text-danger my-3">
+                        Comming Soon
+                    </div>
+                <?php
+                }
+                ?>
             </div>
+        </div>
     </div>
 </section>
 <section class="description__video container mt-5">
@@ -214,8 +256,6 @@ if (isset($_GET['season'])) {
         <div class="slider-small">
             <?php
             $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
-
-
             foreach ($ads as $GETads) { ?>
                 <div class="card-small">
                     <div class="cards">
@@ -227,8 +267,6 @@ if (isset($_GET['season'])) {
             <?php
             }
             ?>
-
-
         </div>
     </div>
 </section>
@@ -240,10 +278,11 @@ if (isset($_GET['season'])) {
             <p class="fs-5 text-white">
                 Comments
             </p>
-            <form action="add-comments-db.php" method="post">
+            <form action="add-series-comment-db.php" method="post">
                 <div class="bg_gray w-100 button__radius py-3 d-flex justify-content-between px-4">
                     <input type="text" name="comments" class="bg-transparent  border-0 nofocus w-100 text-white placeholder_white" placeholder="leave a comment ...">
-                    <input type="hidden" name="movie-id" value="<?php echo $_GET['detail']; ?>">
+                    <input type="hidden" name="series-id" value="<?php echo $series_id; ?>">
+                    <input type="hidden" name="season-id" value="<?php echo $season_name; ?>">
                     <button class="btn-gray-1 " name="submit" type="submit">
                         Send
                     </button>
@@ -251,7 +290,7 @@ if (isset($_GET['season'])) {
                 </div>
             </form>
             <?php
-            $result = mysqli_query($con, "Select * from comments order by id DESC LIMIT 3 ");
+            $result = mysqli_query($con, "Select * from comments where `series_id` =$series_id order by id DESC LIMIT 3");
             foreach ($result as $Getresult) {
             ?>
                 <div class="d-flex gap-lg-3 align-items-center  gap-md-5 gap-3 mt-5 ">

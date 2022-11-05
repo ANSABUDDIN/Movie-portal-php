@@ -70,16 +70,16 @@ include 'config.php';
                             <h5 class="text-light fs-6">
                                 Country
                             </h5>
-                            <select name="category" id="" class=" form-control bg-transparent text-danger">
+                            <select name="country" id="" class=" form-control bg-transparent text-danger">
                                 <option disabled selected>
                                     Select any option
                                 </option>
                                 <?php
-                                $sql ="SELECT  DISTINCT category FROM `movie`";
+                                $sql ="SELECT  DISTINCT country FROM `movie`";
                                 $category = mysqli_query($con,$sql);
                                 foreach ($category as $GETcategory){?>
-                                    <option value="<?php echo $GETcategory['category']; ?>">
-                                        <?php echo $GETcategory['category']; ?>
+                                    <option value="<?php echo $GETcategory['country']; ?>">
+                                        <?php echo $GETcategory['country']; ?>
                                     </option>
                                 <?php
                                 }
@@ -98,21 +98,43 @@ include 'config.php';
             <div class="col-lg-9 ps-lg-3 col-12 pt-lg-0 pt-5">
                 <div class="row" id="result">
                     <?php
+                    // title outcomes
                     $title = "";
-                    if (isset($_GET['title'])  && $_GET['category'] == "") {
+                    if (isset($_GET['title']) && isset($_GET['genre']) == "" && isset($_GET['year']) == "" && isset($_GET['country']) == "") {
                         $title = "where `title` LIKE '%" . $_GET['title'] . "%'";
                     }
-                    $category = "";
-                    if (isset($_GET['category']) && $_GET['title'] == "") {
-                        $category = "where `category`='" . $_GET['category'] . "'";
-                    }
-                    $all = "";
-                    if (isset($_GET['title']) && isset($_GET['category'])) {
-                        if ($_GET['title'] != "" &&  $_GET['category'] != "") {
-                            $all = "where `category`='" . $_GET['category'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
+                    $title_genre= "";
+                    if (isset($_GET['title']) && isset($_GET['genre'])) {
+                        if ($_GET['title'] != "" &&  $_GET['genre'] != "") {
+                            $title_genre = "where `genre`='" . $_GET['genre'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
                         }
                     }
-                    $movie = mysqli_query($con, "select * from movie $title $category $all");
+                    $title_year="";
+                    if (isset($_GET['title']) && isset($_GET['year'])) {
+                        if ($_GET['title'] != "" &&  $_GET['year'] != "") {
+                            $title_year = "where `release_year`='" . $_GET['year'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
+                        }
+                    }
+                    $title_country="";
+                    if (isset($_GET['title']) && isset($_GET['country'])) {
+                        if ($_GET['title'] != "" &&  $_GET['country'] != "") {
+                            $title_country = "where `country`='" . $_GET['country'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
+                        }
+                    }
+
+
+
+
+
+
+
+                    $genre = "";
+                    if (isset($_GET['genre']) && $_GET['title'] == "") {
+                        $genre = "where `genre`='" . $_GET['genre'] . "'";
+                    }
+                    
+                    $movie = mysqli_query($con, "select * from movie $title $title_genre  $title_year $title_country $genre");
+                   
                     if (mysqli_num_rows($movie) > 0) {
                         foreach ($movie as $GETmovie) { ?>
                             <div id="card-data" class="col-lg-3 col-6 my-4 ">

@@ -34,6 +34,45 @@ if (isset($_GET['detail'])) {
     <div class="row mx-0 gap-lg-0 gap-5">
         <div class="col-lg-9 ps-0">
             <div class="row mx-0 gap-lg-0 align-items-center gap-4">
+
+                <div class="col-lg-12 px-lg-0">
+                    <div class="d-flex justify-content-center w-100 mx-auto my-4">
+                        <iframe width="100%" class="rounded-3" height="415" src="<?php echo $trailer_link; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- <h3 class="capitalize text-light">
+
+                        <?php echo $title . " | | " . $release_year; ?>
+                    </h3>
+                    <h6 class="capitalize text-light">
+                
+                    </h6> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="d-flex flex-column ">
+                <div class="vertical-small">
+                    <?php
+                    $ads = mysqli_query($con, "select * from ads where category= 'sidebanner'");
+                    foreach ($ads as $GETads) {
+                    ?>
+                        <div class="card-small">
+                            <div class="cards">
+                                <div class="pe-3">
+                                    <img src="<?php echo $GETads['image']; ?>" class="adsbonus" alt="" style="border-radius: 20px;">
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-0 gap-lg-0 gap-5">
+        <div class="col-lg-9 ps-0">
+            <div class="row mx-0 gap-lg-0 align-items-center gap-4">
                 <div class="col-lg-5 ps-0">
                     <!-- <img class="card__banner w-100 h-100" style="border-radius: 24px;"
                             src="assets/images/Landscape.png" alt=""> -->
@@ -122,7 +161,7 @@ if (isset($_GET['detail'])) {
         </div>
     </div>
 </section>
-<section class="description__video container mt-5">
+<!-- <section class="description__video container mt-5">
     <p class="text-white fs-5">Description</p>
     <p class="text_gray">
         <?php echo $description; ?>
@@ -132,7 +171,7 @@ if (isset($_GET['detail'])) {
 
         <iframe width="100%" class="rounded-3" height="415" src="<?php echo $trailer_link; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-</section>
+</section> -->
 <section class="small pt-lg-5 pt-3">
     <div class="container">
         <div class="slider-small">
@@ -210,14 +249,14 @@ if (isset($_GET['detail'])) {
                 </div>
             </form>
             <?php
-                $result = mysqli_query($con, "Select * from comments order by id DESC LIMIT 3");
-                foreach ($result as $Getresult) {
-                ?>
-            <div class="d-flex gap-lg-3 align-items-center  gap-md-5 gap-3 mt-5 ">
-                <div class="comment__avatar">
-                    <img src="assets/images/footerbg.jpg" alt="" class=" img-fluid rounded-circle ">
-                </div>
-                
+            $result = mysqli_query($con, "Select * from comments where `movie-id` =$movie_id order by id DESC LIMIT 3");
+            foreach ($result as $Getresult) {
+            ?>
+                <div class="d-flex gap-lg-3 align-items-center  gap-md-5 gap-3 mt-5 ">
+                    <div class="comment__avatar">
+                        <img src="assets/images/footerbg.jpg" alt="" class=" img-fluid rounded-circle ">
+                    </div>
+
                     <div class="comment__content">
                         <div class="d-flex gap-5 ">
                             <div>
@@ -233,11 +272,11 @@ if (isset($_GET['detail'])) {
                             </p>
                         </div>
                     </div>
-                
-            </div>
+
+                </div>
             <?php
-                }
-                ?>
+            }
+            ?>
 
         </div>
         <div class="col-lg-3">

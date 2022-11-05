@@ -2,22 +2,22 @@
 include 'header.php';
 include 'config.php';
 ?>
-<section class="banner">
+<section class="banner pt-4">
     <div class="container">
         <div class="slider-banner">
-            <?php 
-               $banner = mysqli_query($con, "select * from banner");
-                     foreach ($banner as $GETbanner) { ?>
-            <div class="card-banner ">
-                <div class="cards">
-                    <div>
-                        <a href="#"><img src="<?php echo $GETbanner['image'];?>" class="banner-img" alt="hello"></a>
+            <?php
+            $banner = mysqli_query($con, "select * from banner");
+            foreach ($banner as $GETbanner) { ?>
+                <div class="card-banner ">
+                    <div class="cards">
+                        <div>
+                            <a href="#"><img src="<?php echo $GETbanner['image']; ?>" class="banner-img" alt="hello"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -26,21 +26,21 @@ include 'config.php';
 <section class="small pt-lg-5 pt-3">
     <div class="container">
         <div class="slider-small">
-            <?php 
-                    $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
-              
-               
-                     foreach ($ads as $GETads) { ?>
-            <div class="card-small">
-                <div class="cards">
-                    <div class="pe-3">
-                        <img src="<?php echo $GETads['image'];?>" class="small-img" alt="">
+            <?php
+            $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
+
+
+            foreach ($ads as $GETads) { ?>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="<?php echo $GETads['image']; ?>" class="small-img" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
 
 
         </div>
@@ -52,40 +52,39 @@ include 'config.php';
 <section class="small pt-lg-5 pt-3">
     <div class="container ">
         <div class="d-flex justify-content-between">
-            <h5 class="text-light">Latest Movies to Watch</h5>
+            <h5 class="text-light">lastest updated movie </h5>
             <a href="series.php?series=Movie">
                 <p class="pointer fs-7">Explore More<i class="fa-solid fa-arrow-right-long ps-2"></i></p>
             </a>
         </div>
         <div class="slider-single">
-            <?php 
-             
-                    $movie = mysqli_query($con, "select * from movie where category = 'Movie' ");
-               
-                     foreach ($movie as $GETmovie) { ?>
-            <div class="card-main ">
-                <div class="cards ">
-                    <div class="d-flex">
-                        <!-- <div class="ratings">
+            <?php
+
+            $movie = mysqli_query($con, "select * from movie");
+
+            foreach ($movie as $GETmovie) { ?>
+                <div class="card-main ">
+                    <div class="cards ">
+                        <div class="d-flex">
+                            <!-- <div class="ratings">
                                 <i class="fa-solid fa-star"></i> 5.1
                             </div> -->
-                    </div>
-                    <div>
-                        <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  "
-                                src="<?php echo $GETmovie['image']; ?>" alt=""></a>
-                    </div>
-                    <div class="text-center">
-                        <div class="movie-name text-white  ">
-                            <h2 class="capitalize">
-                                <?php echo $GETmovie['title']; ?>
-                            </h2>
+                        </div>
+                        <div>
+                            <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt=""></a>
+                        </div>
+                        <div class="text-center">
+                            <div class="movie-name text-white  ">
+                                <h2 class="capitalize">
+                                    <?php echo $GETmovie['title']; ?>
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
         </div>
 
 
@@ -97,21 +96,21 @@ include 'config.php';
 <section class="small pt-lg-5 pt-3">
     <div class="container">
         <div class="slider-small">
-            <?php 
-                    $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
-              
-               
-                     foreach ($ads as $GETads) { ?>
-            <div class="card-small">
-                <div class="cards">
-                    <div class="pe-3">
-                        <img src="<?php echo $GETads['image'];?>" class="small-img" alt="">
+            <?php
+            $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
+
+
+            foreach ($ads as $GETads) { ?>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="<?php echo $GETads['image']; ?>" class="small-img" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
 
 
         </div>
@@ -123,98 +122,36 @@ include 'config.php';
 <section class="small pt-lg-5 pt-3">
     <div class=" container ">
         <div class="d-flex justify-content-between">
-            <h5 class="text-light">Latest Series to Watch</h5>
-            <a href="series.php?series=Series">
+            <h5 class="text-light capitalize">lastst updated series</h5>
+            <a href="series.php?series=series">
                 <p class="pointer fs-7">Explore More<i class="fa-solid fa-arrow-right-long ps-2"></i></p>
             </a>
         </div>
         <div class="slider-single">
-            <?php 
-            
-                    $movie = mysqli_query($con, "select * from series ");
-               
-                     foreach ($movie as $GETmovie) { ?>
-            <div class="card-main ">
-                <div class="cards ">
-                    <div class="d-flex">
-                        <!-- <div class="ratings">
-                                <i class="fa-solid fa-star"></i> 5.1
-                            </div> -->
-                    </div>
-                    <div>
-                        <a href="seriesdetail.php?series=<?php echo $GETmovie['id']; ?>&season=1"><img class="card-img  "
-                                src="<?php echo $GETmovie['image']; ?>" alt=""></a>
-                    </div>
-                    <div class="text-center">
-                        <div class="movie-name text-white  ">
-                            <h2 class="capitalize">
-                                <?php echo $GETmovie['title']; ?>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <?php
-             }
-             ?>
-        </div>
 
+            $movie = mysqli_query($con, "select * from series ");
 
-    </div>
-</section>
-<!-- series sec -->
+            foreach ($movie as $GETmovie) {
+                $series_id =  $GETmovie['id'];
+                $sql = "SELECT  DISTINCT season FROM `episode` where `series_id`='$series_id' order by season ASC limit 1";
+                $season_id = mysqli_query($con,$sql);
+                foreach ($season_id as $GETseason_id) {
+                    $seasonid = $GETseason_id['season'];
+                }
 
-
-<!-- ads -->
-<!-- drama sec -->
-<section class="small pt-lg-5 pt-3">
-    <div class="container">
-        <div class="slider-small">
-            <?php 
-                    $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
-                     foreach ($ads as $GETads) { ?>
-            <div class="card-small">
-                <div class="cards">
-                    <div class="pe-3">
-                        <img src="<?php echo $GETads['image'];?>" class="small-img" alt="">
-                    </div>
-                </div>
-            </div>
-            <?php
-             }
-             ?>
-
-
-        </div>
-    </div>
-</section>
-<!-- drama sec -->
-<!-- ads -->
-    <section class="small pt-lg-5 pt-3">
-        <div class=" container ">
-            <div class="d-flex justify-content-between">
-                <h5 class="text-light">Latest Drama to Watch</h5>
-                <a href="series.php?series=Series">
-                    <p class="pointer fs-7">Explore More<i class="fa-solid fa-arrow-right-long ps-2"></i></p>
-                </a>
-            </div>
-            <div class="slider-single">
-                <?php 
-                
-                        $movie = mysqli_query($con, "select * from movie where category = 'Drama' ");
-                
-                   
-                         foreach ($movie as $GETmovie) { ?>
+            ?>
                 <div class="card-main ">
                     <div class="cards ">
                         <div class="d-flex">
                             <!-- <div class="ratings">
-                                    <i class="fa-solid fa-star"></i> 5.1
-                                </div> -->
+                                <i class="fa-solid fa-star"></i> 5.1
+                            </div> -->
                         </div>
                         <div>
-                            <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  "
-                                    src="<?php echo $GETmovie['image']; ?>" alt=""></a>
+                            <a href="seriesdetail.php?series=<?php echo $GETmovie['id']; ?>&&season=<?php echo $seasonid; ?>">
+                                <img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt="">
+                            </a>
                         </div>
                         <div class="text-center">
                             <div class="movie-name text-white  ">
@@ -225,136 +162,38 @@ include 'config.php';
                         </div>
                     </div>
                 </div>
-                <?php
-                 }
-                 ?>
-            </div>
-    
-    
+            <?php
+            }
+            ?>
         </div>
-    </section>
+
+
+    </div>
+</section>
+<!-- series sec -->
 <!-- ads -->
 <section class="small pt-lg-5 pt-3">
     <div class="container">
         <div class="slider-small">
-            <?php 
-                    $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
-                     foreach ($ads as $GETads) { ?>
-            <div class="card-small">
-                <div class="cards">
-                    <div class="pe-3">
-                        <img src="<?php echo $GETads['image'];?>" class="small-img" alt="">
+            <?php
+            $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
+            foreach ($ads as $GETads) { ?>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="<?php echo $GETads['image']; ?>" class="small-img" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
 
 
         </div>
     </div>
 </section>
 <!-- ads -->
-    <!-- <div class="container pt-5">
-        <div class="text-light">
-            <div class="d-flex justify-content-between">
-                <h5 class="text-light">Latest Drama to Watch</h5>
-                <a href="series.php?series=Drama">
-                    <p class="pointer fs-7">Explore More<i class="fa-solid fa-arrow-right-long ps-2"></i></p>
-                </a>
-            </div>
-        </div>
-        <div class="row mx-0">
-            <div class="slider-single ">
-                <div class="card-main2 card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/Portrait.png" class="card-img" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/Portrait2.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/portrait3.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/portrait4.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main2 card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/Portrait.png" class="card-img" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/Portrait2.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/portrait3.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/portrait4.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main2 card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/Portrait.png" class="card-img" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/Portrait2.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/portrait3.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-main ">
-                    <div class="cards ">
-                        <div>
-                            <img src="assets/images/Card/portrait4.png" class="card-img  " alt="">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
 <!-- drama sec -->
 
 
@@ -362,41 +201,40 @@ include 'config.php';
 <section class="pt-5">
     <div class="container ">
         <div class="d-flex justify-content-between">
-            <h5 class="text-light">New Addes Series to Watch</h5>
+            <h5 class="text-light">Recomended movie</h5>
             <a href="series.php?series">
                 <p class="pointer fs-7">Explore More<i class="fa-solid fa-arrow-right-long ps-2"></i></p>
             </a>
         </div>
         <div class="slider-single">
-            <?php 
-            
-                    $movie = mysqli_query($con, "select * from movie ");
-            
-               
-                     foreach ($movie as $GETmovie) { ?>
-            <div class="card-main ">
-                <div class="cards ">
-                    <div class="d-flex">
-                        <!-- <div class="ratings">
+            <?php
+
+            $movie = mysqli_query($con, "select * from movie order by id DESC ");
+
+
+            foreach ($movie as $GETmovie) { ?>
+                <div class="card-main ">
+                    <div class="cards ">
+                        <div class="d-flex">
+                            <!-- <div class="ratings">
                                 <i class="fa-solid fa-star"></i> 5.1
                             </div> -->
-                    </div>
-                    <div>
-                        <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  "
-                                src="<?php echo $GETmovie['image']; ?>" alt=""></a>
-                    </div>
-                    <div class="text-center">
-                        <div class="movie-name text-white  ">
-                            <h2 class="capitalize">
-                                <?php echo $GETmovie['title']; ?>
-                            </h2>
+                        </div>
+                        <div>
+                            <a href="moviedetail.php?detail=<?php echo $GETmovie['id']; ?>"><img class="card-img  " src="<?php echo $GETmovie['image']; ?>" alt=""></a>
+                        </div>
+                        <div class="text-center">
+                            <div class="movie-name text-white  ">
+                                <h2 class="capitalize">
+                                    <?php echo $GETmovie['title']; ?>
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
         </div>
 
 
@@ -408,19 +246,19 @@ include 'config.php';
 <section class="small pt-lg-5 pt-3">
     <div class="container">
         <div class="slider-small">
-            <?php 
-                    $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
-                     foreach ($ads as $GETads) { ?>
-            <div class="card-small">
-                <div class="cards">
-                    <div class="pe-3">
-                        <img src="<?php echo $GETads['image'];?>" class="small-img" alt="">
+            <?php
+            $ads = mysqli_query($con, "select * from ads where category= 'main-banner'");
+            foreach ($ads as $GETads) { ?>
+                <div class="card-small">
+                    <div class="cards">
+                        <div class="pe-3">
+                            <img src="<?php echo $GETads['image']; ?>" class="small-img" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php
-             }
-             ?>
+            }
+            ?>
 
 
         </div>

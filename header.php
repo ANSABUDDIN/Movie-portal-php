@@ -22,86 +22,163 @@ include 'config.php';
 <body>
     <header>
         <div class="">
-            <nav class="navbar navbar-expand-lg navbar-light py-4 bg-transparent">
-                <div class="container  align-items-center">
-                    <div><a class="navbar-brand text-light fs-5" href="index.php">Movie Web </a></div>
 
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light py-3 bg-transparent">
+                <div class="container  align-items-center">
+                    <div><a class="navbar-brand text-red  fw-bold fs-4" href="index.php">Movie <span class="text-light"> Web</span> </a></div>
                     <div class="d-flex gap-1 align-items-center">
                         <div class="d-lg-none d-flex align-items-center ">
                             <ul class="list-unstyled mb-0   d-flex align-items-center gap-2">
-                                <li>
+                                <!-- <li>
                                     <a href="searchfilter.php">
                                         <i class="fa-solid fa-magnifying-glass fs-6 icon"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <i class="fa-regular fa-bell fs-6 icon"></i>
-                                </li>
+                                </li> -->
                                 <button class="navbar-toggler mt-2  p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon text-light"><i class="fa-solid fa-bars"></i></span>
                                 </button>
-                                <li>
+                                <!-- <li>
                                     <img src="assets/images/logo2.png" class="w-75" alt="">
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 
                     </div>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-                            <li class="nav-item mx-auto">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item ms-lg-4">
                                 <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
                             </li>
-                            <li class="nav-item dropdown mx-auto">
-                                <a class="nav-link dropdown-toggle text-light a-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="a-color">Series</span>
+                            <li class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Series
                                 </a>
-                                <ul class="dropdown-menu bg-dark p-1" aria-labelledby="navbarDropdown">
+                                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdown">
                                     <?php
-                                    $series = mysqli_query($con, "select * from series ");
+                                    $series = mysqli_query($con, "select * from series  order by id DESC LIMIT 5 ");
                                     foreach ($series as $getseries) { ?>
-                                        <li><a class="dropdown-item text-light"  href="seriesdetail.php?series=<?php echo $getseries['id']; ?>&season=1">
-                                            
-                                        <?php
-                                        echo $getseries['title'];
-                                        ?>
-                                        </a>
-                                    </li>
+                                        <li><a class="fs-6 dropdown-item capitalize text-light" href="moviedetail.php?detail=<?php echo $getseries['id']; ?>">
+
+                                                <?php
+                                                echo $getseries['title'];
+                                                ?>
+                                            </a>
+                                        </li>
                                     <?php
                                     }
                                     ?>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown mx-auto">
-                                <a class="nav-link dropdown-toggle text-light a-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="a-color">Movies</span>
-                                </a>
-                                <ul class="dropdown-menu bg-dark p-1" aria-labelledby="navbarDropdown">
-                                <?php
-                                    $series = mysqli_query($con, "select * from movie where category = 'Movie' ");
-                                    foreach ($series as $getseries) { ?>
-                                        <li><a class="dropdown-item text-light" href="moviedetail.php?detail=<?php echo $getseries['id']; ?>">
-                                            
-                                        <?php
-                                        echo $getseries['title'];
-                                        ?>
+                                    <div class="my-mini-line"></div>
+                                    <li>
+                                        <a class="dropdown-item fs-6 text-light" href="moviedetail.php?detail=<?php echo $getseries['id']; ?>">
+                                            See More
                                         </a>
                                     </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Genere
+                                </a>
+                                <ul class=" dropdown-menu  p-1" aria-labelledby="navbarDropdown">
+
+                                    <?php
+                                    $genre = mysqli_query($con, "select * from genre order by id asc limit 7 ");
+                                    foreach ($genre as $getgenre) { ?>
+                                        <li><a class="fs-6 capitalize dropdown-item text-light" href="series.php?series=Movie&&category=<?php echo $getgenre['name']; ?>">
+
+                                                <?php
+                                                echo $getgenre['name'];
+                                                ?>
+                                            </a>
+                                        </li>
                                     <?php
                                     }
                                     ?>
+                <div class="my-mini-line"></div>
+                                    <li>
+                                        <a class="dropdown-item capitalize  fs-6 text-light" href="searchfilter.php">
+
+                                            See More
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </li>
-                            <li class="nav-item mx-auto ">
-                                <a class="nav-link " aria-current="page" href="#"><span class="a-color">
-                                        Watchlist</span></a>
+                            <li class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Year
+                                </a>
+                                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdown">
+                                    <?php
+                                    $year = mysqli_query($con, "select * from year  order by id DESC LIMIT 5 ");
+                                    foreach ($year as $getyear) { ?>
+                                        <li><a class="fs-6 dropdown-item capitalize text-light" href="series.php?series=Movie&&year=<?php echo $getyear['name']; ?>">
+
+                                                <?php
+                                                echo $getyear['name'];
+                                                ?>
+                                            </a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <div class="my-mini-line"></div>
+                                    <li>
+                                        <a class="dropdown-item fs-6 text-light" href="searchfilter.php">
+                                            See More
+                                        </a>
+                                    </li>
+
+                                </ul>
                             </li>
-                            <li class="nav-item mx-auto">
-                                <a class="nav-link text-light a-color" aria-current="page" href="#"><span class="a-color">Lorem Ipsum</span> </a>
+                            <li class="nav-item dropdown mx-lg-2">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Country
+                                </a>
+                                <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdown">
+                                    <?php
+                                    $country = mysqli_query($con, "select * from country  order by id asc LIMIT 5 ");
+                                    foreach ($country as $getcountry) { ?>
+                                        <li><a class="fs-6 dropdown-item capitalize text-light" href="series.php?series=Movie&&country=<?php echo $getcountry['nicename']; ?>">
+
+                                                <?php
+                                                echo $getcountry['nicename'];
+                                                ?>
+                                            </a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <div class="my-mini-line"></div>
+                                    <li>
+                                        <a class="dropdown-item fs-6 text-light" href="searchfilter.php">
+                                            See More
+                                        </a>
+                                    </li>
+
+                                </ul>
                             </li>
+
                         </ul>
-                        <div class="d-lg-flex d-none justify-content-end">
+
+                        <form>
+                            <div class=" search-div">
+                                <input class="form-control my-input me-2 bg-transperent" type="search" placeholder="Search" aria-label="text">
+                                <button class="" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- <div class="d-lg-flex d-none justify-content-end">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
                                 <li>
                                     <a href="searchfilter.php">
@@ -115,10 +192,4 @@ include 'config.php';
                                     <img src="assets/images/logo2.png" class="w-75" alt="">
                                 </li>
                             </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+                        </div> -->
