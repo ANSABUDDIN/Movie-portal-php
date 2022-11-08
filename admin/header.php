@@ -263,31 +263,45 @@
         <div class="navbar-vertical-content">
           <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
             <!-- Collapse -->
-            <!-- <div class="nav-item">
+            <div class="nav-item">
               <a class="nav-link " href="index.php" data-placement="left">
                 <i class="bi-house-door nav-icon"></i>
-                <span class="nav-link-title">Dashboards</span>
+                <span class="nav-link-title">Dashboard</span>
               </a>
-            </div> -->
+            </div>
             <div class="nav-item">
               <a class="nav-link " href="movies.php" data-placement="left">
-                <i class="bi-book nav-icon"></i>
+                <i class="bi bi-film nav-icon"></i>
 
                 <span class="nav-link-title">Movies</span>
               </a>
             </div>
             <div class="nav-item">
+              <a class="nav-link " href="series.php" data-placement="left">
+                <i class="bi bi-file-earmark-play nav-icon"></i>
+
+                <span class="nav-link-title">Series</span>
+              </a>
+            </div>
+            <div class="nav-item">
               <a class="nav-link " href="banner.php" data-placement="left">
-                <i class="bi-building nav-icon"></i>
+                <i class="bi-tv nav-icon"></i>
 
                 <span class="nav-link-title">Banners</span>
               </a>
             </div>
             <div class="nav-item">
               <a class="nav-link " href="ads.php" data-placement="left">
-                <i class="bi-tv nav-icon"></i>
+                <i class="bi bi-badge-ad-fill nav-icon"></i>
 
                 <span class="nav-link-title">Ads</span>
+              </a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link " href="ads.php" data-placement="left">
+                <i class="bi-chat nav-icon"></i>
+
+                <span class="nav-link-title">Comments</span>
               </a>
             </div>
            

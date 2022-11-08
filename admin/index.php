@@ -42,7 +42,7 @@ include '../config.php';
               <div class="col">
                 <span class="js-counter display-4 text-dark">
                 <?php 
-                  $movies = mysqli_query($con,"select * from movie where category='Movie'");
+                  $movies = mysqli_query($con,"select * from movie ");
                   echo mysqli_num_rows($movies);
                   ?>  
                 
@@ -53,7 +53,7 @@ include '../config.php';
 
               <div class="col-auto">
                 <span class="badge bg-soft-success text-success p-1">
-                  <i class="bi-graph-up"></i> 5.0%
+                  <i class="bi-graph-up"></i> Movies
                 </span>
               </div>
               <!-- End Col -->
@@ -68,14 +68,14 @@ include '../config.php';
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">Total Drama</h6>
+            <h6 class="card-subtitle mb-2">Total Series</h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
                 <span class="js-counter display-4 text-dark">
 
                 <?php 
-                  $movies = mysqli_query($con,"select * from movie where category='Drama'");
+                  $movies = mysqli_query($con,"select * from series ");
                   echo mysqli_num_rows($movies);
                   ?>  
                 </span>
@@ -84,7 +84,7 @@ include '../config.php';
 
               <div class="col-auto">
                 <span class="badge bg-soft-success text-success p-1">
-                  <i class="bi-graph-up"></i> 1.2%
+                  <i class="bi-movie-up"></i> Series
                 </span>
               </div>
             </div>
@@ -98,13 +98,13 @@ include '../config.php';
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">Total Series </h6>
+            <h6 class="card-subtitle mb-2">Total Ads Run </h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
                 <span class="js-counter display-4 text-dark">
                 <?php 
-                  $movies = mysqli_query($con,"select * from movie where category='Series'");
+                  $movies = mysqli_query($con,"select * from ads ");
                   echo mysqli_num_rows($movies);
                   ?> 
                 </span>
@@ -113,7 +113,7 @@ include '../config.php';
 
               <div class="col-auto">
                 <span class="badge bg-soft-danger text-danger p-1">
-                  <i class="bi-graph-down"></i> 2.8%
+                  <i class="bi-graph-down"></i> Ads
                 </span>
               </div>
             </div>
@@ -127,16 +127,21 @@ include '../config.php';
         <!-- Card -->
         <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2">Total Ads Run</h6>
+            <h6 class="card-subtitle mb-2">Total Comments</h6>
 
             <div class="row align-items-center gx-2">
               <div class="col">
-                <span class="js-counter display-4 text-dark">28.6</span>
+                <span class="js-counter display-4 text-dark">
+                <?php 
+                  $movies = mysqli_query($con,"select * from comments ");
+                  echo mysqli_num_rows($movies);
+                  ?>
+                </span>
                 
               </div>
 
               <div class="col-auto">
-                <!-- <span class="badge bg-soft-secondary text-secondary p-1">0.0%</span> -->
+                <span class="badge bg-soft-secondary text-secondary p-1">Comments</span>
               </div>
             </div>
             <!-- End Row -->

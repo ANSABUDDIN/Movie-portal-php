@@ -11,7 +11,7 @@ if (isset($_GET['detail'])) {
         $description = $movie_detail['description'];
         $release_year = $movie_detail['release_year'];
         $director_name = $movie_detail['director_name'];
-        $category = $movie_detail['category'];
+        $category = $movie_detail['genre'];
         $movie_star = $movie_detail['movie_star'];
         $director_name = $movie_detail['director_name'];
         $movie_link = $movie_detail['movie_link'];

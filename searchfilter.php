@@ -35,9 +35,9 @@ include 'config.php';
                                     Select any option
                                 </option>
                                 <?php
-                                $sql ="SELECT  DISTINCT genre FROM `movie`";
-                                $category = mysqli_query($con,$sql);
-                                foreach ($category as $GETcategory){?>
+                                $sql = "SELECT  DISTINCT genre FROM `movie`";
+                                $category = mysqli_query($con, $sql);
+                                foreach ($category as $GETcategory) { ?>
                                     <option value="<?php echo $GETcategory['genre']; ?>">
                                         <?php echo $GETcategory['genre']; ?>
                                     </option>
@@ -55,9 +55,9 @@ include 'config.php';
                                     Select any option
                                 </option>
                                 <?php
-                                $sql ="SELECT  DISTINCT release_year FROM `movie`";
-                                $category = mysqli_query($con,$sql);
-                                foreach ($category as $GETcategory){?>
+                                $sql = "SELECT  DISTINCT release_year FROM `movie`";
+                                $category = mysqli_query($con, $sql);
+                                foreach ($category as $GETcategory) { ?>
                                     <option value="<?php echo $GETcategory['release_year']; ?>">
                                         <?php echo $GETcategory['release_year']; ?>
                                     </option>
@@ -75,9 +75,9 @@ include 'config.php';
                                     Select any option
                                 </option>
                                 <?php
-                                $sql ="SELECT  DISTINCT country FROM `movie`";
-                                $category = mysqli_query($con,$sql);
-                                foreach ($category as $GETcategory){?>
+                                $sql = "SELECT  DISTINCT country FROM `movie`";
+                                $category = mysqli_query($con, $sql);
+                                foreach ($category as $GETcategory) { ?>
                                     <option value="<?php echo $GETcategory['country']; ?>">
                                         <?php echo $GETcategory['country']; ?>
                                     </option>
@@ -99,41 +99,88 @@ include 'config.php';
                 <div class="row" id="result">
                     <?php
                     // title outcomes
-                    $title = "";
-                    if (isset($_GET['title']) && isset($_GET['genre']) == "" && isset($_GET['year']) == "" && isset($_GET['country']) == "") {
-                        $title = "where `title` LIKE '%" . $_GET['title'] . "%'";
-                    }
-                    $title_genre= "";
-                    if (isset($_GET['title']) && isset($_GET['genre'])) {
-                        if ($_GET['title'] != "" &&  $_GET['genre'] != "") {
-                            $title_genre = "where `genre`='" . $_GET['genre'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
+                    // $title = "";
+                    // if (isset($_GET['title']) && isset($_GET['genre']) == "" && isset($_GET['year']) == "" && isset($_GET['country']) == "") {
+                    //     $title = "where `title` LIKE '%" . $_GET['title'] . "%'";
+                    // }
+                    // $title_genre = "";
+                    // if (isset($_GET['title']) && isset($_GET['genre'])) {
+                    //     if ($_GET['title'] != "" &&  $_GET['genre'] != "") {
+                    //         $title_genre = "where `genre`='".$_GET['genre']."' && `title` LIKE '%".$_GET['title']."%'";
+                    //     }
+                    // }
+                    // $title_year = "";
+                    // if (isset($_GET['title']) && isset($_GET['year'])) {
+                    //     if ($_GET['title'] != "" &&  $_GET['year'] != "") {
+                    //         $title_year = "where `release_year`='" . $_GET['year'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
+                    //     }
+                    // }
+                    // $title_country = "";
+                    // if (isset($_GET['title']) && isset($_GET['country'])) {
+                    //     if ($_GET['title'] != "" &&  $_GET['country'] != "") {
+                    //         $title_country = "where `country`='" . $_GET['country'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
+                    //     }
+                    // }
+
+                    // // genre outcomes
+
+                    // $genre = "";
+                    // if (isset($_GET['genre']) && isset($_GET['title']) != "" && isset($_GET['year']) == "" && isset($_GET['country']) == "") {
+                    //     $genre = "where `genre` = '". $_GET['genre'] ."'";
+                    // }
+                   
+                    // $genre_year = "";
+                    // if (isset($_GET['genre']) && isset($_GET['year'])) {
+                    //     if ($_GET['genre'] != "" &&  $_GET['year'] != "") {
+                    //         $title_year = "where `release_year`='" . $_GET['year'] . "' && `genre` = '" . $_GET['genre'] . "'";
+                    //     }
+                    // }
+                    // $genre_country = "";
+                    // if (isset($_GET['genre']) && isset($_GET['country'])) {
+                    //     if ($_GET['genre'] != "" &&  $_GET['country'] != "") {
+                    //         $title_country = "where `country`='" . $_GET['country'] . "' && `genre` ='".$_GET['genre'] . "'";
+                    //     }
+                    // }
+
+
+                    $title = "`title` IS NOT NULL";
+                    if (isset($_GET['title'])) {
+                        if ($_GET['title'] != "" ) {
+                            $title = "`title` LIKE '%" . $_GET['title'] . "%'";
                         }
                     }
-                    $title_year="";
-                    if (isset($_GET['title']) && isset($_GET['year'])) {
-                        if ($_GET['title'] != "" &&  $_GET['year'] != "") {
-                            $title_year = "where `release_year`='" . $_GET['year'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
-                        }
-                    }
-                    $title_country="";
-                    if (isset($_GET['title']) && isset($_GET['country'])) {
-                        if ($_GET['title'] != "" &&  $_GET['country'] != "") {
-                            $title_country = "where `country`='" . $_GET['country'] . "' && `title` LIKE '%" . $_GET['title'] . "%'";
-                        }
-                    }
-
-
-
-
-
-
 
                     $genre = "";
-                    if (isset($_GET['genre']) && $_GET['title'] == "") {
-                        $genre = "where `genre`='" . $_GET['genre'] . "'";
+                    if (isset($_GET['genre'])) {
+                        if ($_GET['genre'] != "" ) {
+                            $genre = "&& `genre` = '".$_GET['genre']."'";
+                        }
+                    }
+
+                    $country = "";
+                    if (isset($_GET['country'])) {
+                        if ($_GET['country'] != "" ) {
+                            $country = "&& `country` = '".$_GET['country']."'";
+                        }
+                    }
+
+                    $year = "";
+                    if (isset($_GET['year'])) {
+                        if ($_GET['year'] != "" ) {
+                            $year = "&& `release_year` = '".$_GET['year']."'";
+                        }
+                    }
+                   
+                    // $movie = mysqli_query($con, "select * from movie $title $title_genre  $title_year $title_country $genre $genre_year  $genre_country");
+                    if (isset($_GET['title'])) {
+                        
+                            $movie = mysqli_query($con, "select * from movie where $title $genre $country $year");
+                        
+                    }else
+                    {
+                        $movie = mysqli_query($con, "select * from movie");
                     }
                     
-                    $movie = mysqli_query($con, "select * from movie $title $title_genre  $title_year $title_country $genre");
                    
                     if (mysqli_num_rows($movie) > 0) {
                         foreach ($movie as $GETmovie) { ?>

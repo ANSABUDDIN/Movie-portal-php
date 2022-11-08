@@ -13,7 +13,7 @@ if((isset($_POST['submit'])))
     $director_name=$_POST['director_name'];
     $movie_star=$_POST['movie_star'];
     $country=$_POST['country'];
-    $category=$_POST['category'];
+    $category=$_POST['genre'];
     // $date=date("Y-m-d");
     $logo=$_FILES['file'];	
     $lfilename = $logo['name'];
@@ -33,7 +33,7 @@ if((isset($_POST['submit'])))
         header("location:add-movie.php");
     }
      
-    $myquery = "INSERT INTO `movie`(`title`, `description`, `movie_link`, `download_link`, `trailer_link`, `release_year`, `director_name`, `movie_star`, `country`, `image`, `category`) VALUES ('$title','$description','$movie_link','$download_link','$trailer_link','$release_year','$director_name','$movie_star','$country','$lsdestinationfile','$category')";
+    $myquery = "INSERT INTO `movie`(`title`, `description`, `movie_link`, `download_link`, `trailer_link`, `release_year`, `director_name`, `movie_star`, `country`, `image`, `genre`) VALUES ('$title','$description','$movie_link','$download_link','$trailer_link','$release_year','$director_name','$movie_star','$country','$lsdestinationfile','$category')";
 
     $result = mysqli_query($con, $myquery);
     // $result = mysqli_query($con,"INSERT INTO `movie`(`title`,`description`,`movie_link`,`download_link`,`trailer_link`,`release_year`,`director_name`,`movie_star`,`image`,`country`,`category`)

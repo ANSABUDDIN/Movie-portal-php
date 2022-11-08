@@ -98,7 +98,7 @@ include 'config.php';
                                     <?php
                                     }
                                     ?>
-                <div class="my-mini-line"></div>
+                                    <div class="my-mini-line"></div>
                                     <li>
                                         <a class="dropdown-item capitalize  fs-6 text-light" href="searchfilter.php">
 
@@ -114,12 +114,12 @@ include 'config.php';
                                 </a>
                                 <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdown">
                                     <?php
-                                    $year = mysqli_query($con, "select * from year  order by id DESC LIMIT 5 ");
+                                    $year = mysqli_query($con, "SELECT  DISTINCT release_year FROM `movie` order by release_year DESC LIMIT 5 ");
                                     foreach ($year as $getyear) { ?>
-                                        <li><a class="fs-6 dropdown-item capitalize text-light" href="series.php?series=Movie&&year=<?php echo $getyear['name']; ?>">
+                                        <li><a class="fs-6 dropdown-item capitalize text-light" href="series.php?series=Movie&&year=<?php echo $getyear['release_year']; ?>">
 
                                                 <?php
-                                                echo $getyear['name'];
+                                                echo $getyear['release_year'];
                                                 ?>
                                             </a>
                                         </li>
@@ -165,9 +165,9 @@ include 'config.php';
 
                         </ul>
 
-                        <form>
+                        <form action="series.php" get>
                             <div class=" search-div">
-                                <input class="form-control my-input me-2 bg-transperent" type="search" placeholder="Search" aria-label="text">
+                                <input class="form-control my-input me-2 bg-transperent" name="search" type="search" placeholder="Search" aria-label="text">
                                 <button class="" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </form>

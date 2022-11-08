@@ -155,7 +155,7 @@ include("../config.php");
                           Edit
                         </button> -->
                         <a href="?delete=<?php echo $bannerDEtail['id']; ?>"  class="btn btn-danger btn-sm">
-                          Delete
+                        <i class="bi bi-trash-fill"></i>
                         </a>
                         <!-- <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                           data-bs-target="#editUserModal">

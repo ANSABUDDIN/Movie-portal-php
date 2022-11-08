@@ -124,7 +124,7 @@ include("../config.php");
 
 
                       <th class="table-column-ps-0">Movie Title</th>
-                      <th>Cetagory</th>
+                      <th>Genre</th>
                       <th>Image</th>
                       <th>veiw Details</th>
                       <th>Action</th>
@@ -152,7 +152,7 @@ include("../config.php");
                       </td>
                       <td>
                    
-                        <span class="d-block fs-5 text-body"><?php echo $movieDEtail['category']; ?></span>
+                        <span class="d-block fs-5 text-body"><?php echo $movieDEtail['genre']; ?></span>
                       </td>
 
                       </td>
@@ -179,7 +179,7 @@ include("../config.php");
                           Edit
                         </button> -->
                         <a href="?delete=<?php echo $movieDEtail['id']; ?>" class="btn btn-danger btn-sm">
-                          Delete
+                        <i class="bi bi-trash-fill"></i>
                         </a>
                         <!-- <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                           data-bs-target="#editUserModal">
@@ -502,11 +502,22 @@ include("../config.php");
                   
                 </div>
               </div>
+              <div class="row mb-4">
+                <label for="editEmailModalLabel" class="col-sm-3 col-form-label form-label">Country</label>
+
+                <div class="col-sm-9 ">
+                  <div class="form-control">
+
+                    <?php echo $Getmovie['country']; ?>
+                  </div>
+                  
+                </div>
+              </div>
               <!-- End Form -->
 
               <!-- Form -->
               <div class="row mb-4">
-                <label for="editPhoneLabel" class="col-sm-3 col-form-label form-label">Category
+                <label for="editPhoneLabel" class="col-sm-3 col-form-label form-label">Genre
 
                 </label>
 
@@ -514,7 +525,7 @@ include("../config.php");
                   <div class="input-group input-group-sm-vertical">
                     <input type="text" class="js-masked-input form-control" disabled name="phone" id="editPhoneLabel"
                       placeholder="+x(xxx)xxx-xx-xx" aria-label="+x(xxx)xxx-xx-xx"
-                      value="<?php echo $Getmovie['category']; ?>" />
+                      value="<?php echo $Getmovie['genre']; ?>" />
                   </div>
                 </div>
               </div>
