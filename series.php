@@ -37,8 +37,7 @@ if(isset($_GET['series'])){
                             $movie = mysqli_query($con, "SELECT * FROM `movie` where release_year='".$_GET['year']."'");
                         }elseif(isset($_GET['country'])){
                             $movie = mysqli_query($con, "SELECT * FROM `movie` where country='".$_GET['country']."'");
-                        }else
-                        {
+                        }else{
                             $movie = mysqli_query($con, "SELECT * FROM `movie`");
                         }
                         
